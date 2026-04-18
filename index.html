@@ -145,237 +145,196 @@ body {
 </body>
 
 </html>
- <title>Free Predictions</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f6f9;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+  .predictions-container {
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+  }
 
-    .container {
-      max-width: 600px;
-      margin: 30px auto;
-      background: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      overflow: hidden;
-    }
+  .predictions-title {
+    background: #dff0e0;
+    padding: 12px;
+    font-weight: bold;
+    color: #2e7d32;
+    border-radius: 6px 6px 0 0;
+  }
 
-    .header {
-      background: #2ecc71;
-      color: #fff;
-      padding: 15px;
-      text-align: center;
-      font-size: 20px;
-      font-weight: bold;
-    }
+  .prediction-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+  }
 
-    .match {
-      padding: 15px;
-      border-bottom: 1px solid #eee;
-    }
+  .prediction-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
 
-    .match:last-child {
-      border-bottom: none;
-    }
+  .ball {
+    font-size: 18px;
+  }
 
-    .prediction {
-      display: flex;
-      justify-content: space-between;
-      font-size: 16px;
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
+  .prediction-info {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .teams {
-      font-size: 14px;
-      color: #555;
-    }
+  .market {
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+  }
 
-    .market {
-      font-size: 12px;
-      color: #999;
-      margin-top: 3px;
-    }
+  .match {
+    font-size: 14px;
+    color: #555;
+  }
 
-    .odds {
-      color: #2ecc71;
-    }
-  </style>
-</head>
-<body>
+  .type {
+    font-size: 12px;
+    color: #999;
+  }
 
-<div class="container">
-  <div class="header">Free Football Predictions</div>
+  .odds {
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+  }
 
-  <div class="match">
-    <div class="prediction">
-      <span>Over 1.5</span>
-      <span class="odds">1.22</span>
-    </div>
-    <div class="teams">RFC Seraing vs KV Waasland-Beveren</div>
-    <div class="market">Over/Under</div>
-  </div>
+  .prediction-card:last-child {
+    border-radius: 0 0 6px 6px;
+  }
 
-  <div class="match">
-    <div class="prediction">
-      <span>Over 1.5</span>
-      <span class="odds">1.19</span>
-    </div>
-    <div class="teams">Inter vs Cagliari</div>
-    <div class="market">Over/Under</div>
-  </div>
-
-  <div class="match">
-    <div class="prediction">
-      <span>Over 1.5</span>
-      <span class="odds">1.19</span>
-    </div>
-    <div class="teams">Kapfenberger SV vs Schwarz-Weiss Bregenz</div>
-    <div class="market">Over/Under</div>
-  </div>
-
-  <div class="match">
-    <div class="prediction">
-      <span>Over 2.5</span>
-      <span class="odds">1.49</span>
-    </div>
-    <div class="teams">Wuhan Three Towns FC vs Chengdu Rongcheng</div>
-    <div class="market">Over/Under</div>
-  </div>
-
-  <div class="match">
-    <div class="prediction">
-      <span>Over 2.5</span>
-      <span class="odds">1.48</span>
-    </div>
-    <div class="teams">RAAL La Louviere vs Waasland Beveren</div>
-    <div class="market">Over/Under</div>
-  </div>
-
-</div>
-
-</body>
-</html>
-
-  <title>Safe Gold Selections</title>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      margin: 0;
-      padding: 0;
-      color: #fff;
-    }
-
-    .container {
-      max-width: 600px;
-      margin: 30px auto;
-      background: #111827;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-      overflow: hidden;
-    }
-
-    .header {
-      background: linear-gradient(90deg, gold, #facc15);
-      color: #000;
-      padding: 15px;
-      text-align: center;
-      font-size: 20px;
-      font-weight: bold;
-    }
-
-    .match {
-      padding: 15px;
-      border-bottom: 1px solid #1f2937;
-    }
-
-    .match:last-child {
-      border-bottom: none;
-    }
-
-    .prediction {
-      display: flex;
-      justify-content: space-between;
-      font-size: 17px;
-      font-weight: bold;
-      margin-bottom: 6px;
-    }
-
-    .teams {
-      font-size: 14px;
-      color: #d1d5db;
-    }
-
-    .market {
-      font-size: 12px;
-      color: #9ca3af;
-      margin-top: 4px;
+  @media (max-width: 600px) {
+    .prediction-card {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
     }
 
     .odds {
-      color: gold;
+      align-self: flex-end;
     }
+  }
+</style>
 
-    .tag {
-      background: gold;
-      color: black;
-      font-size: 10px;
-      padding: 2px 6px;
-      border-radius: 5px;
-      margin-left: 6px;
-    }
-  </style>
-</head>
-<body>
+<div class="predictions-container">
+  <div class="predictions-title">Free Predictions</div>
 
-<div class="container">
-  <div class="header">SAFE GOLD SELECTIONS</div>
-
-  <div class="match">
-    <div class="prediction">
-      <span>Under 3.5 <span class="tag">SAFE</span></span>
-      <span class="odds">1.23</span>
+  <div class="prediction-card">
+    <div class="prediction-left">
+      <div class="ball">⚽</div>
+      <div class="prediction-info">
+        <div class="market">Under 3.5</div>
+        <div class="match">Bristol City vs Norwich</div>
+        <div class="type">Over/Under</div>
+      </div>
     </div>
-    <div class="teams">Shelbourne FC vs Derry City FC</div>
-    <div class="market">Over/Under</div>
+    <div class="odds">1.33</div>
   </div>
 
-  <div class="match">
-    <div class="prediction">
-      <span>Under 3.5 <span class="tag">SAFE</span></span>
-      <span class="odds">1.39</span>
+  <div class="prediction-card">
+    <div class="prediction-left">
+      <div class="ball">⚽</div>
+      <div class="prediction-info">
+        <div class="market">Under 3.5</div>
+        <div class="match">FC Penya d'Andorra vs UE Santa Coloma A</div>
+        <div class="type">Over/Under</div>
+      </div>
     </div>
-    <div class="teams">Cork City FC vs Wexford FC</div>
-    <div class="market">Over/Under</div>
+    <div class="odds">1.29</div>
   </div>
 
-  <div class="match">
-    <div class="prediction">
-      <span>Under 3.5 <span class="tag">SAFE</span></span>
-      <span class="odds">1.24</span>
+  <div class="prediction-card">
+    <div class="prediction-left">
+      <div class="ball">⚽</div>
+      <div class="prediction-info">
+        <div class="market">Under 3.5</div>
+        <div class="match">Ravenna FC 1913 vs Vis Pesaro 1898</div>
+        <div class="type">Over/Under</div>
+      </div>
     </div>
-    <div class="teams">FC Versailles 78 vs LB Chateauroux</div>
-    <div class="market">Over/Under</div>
+    <div class="odds">1.28</div>
   </div>
 
-  <div class="match">
-    <div class="prediction">
-      <span>Under 3.5 <span class="tag">SAFE</span></span>
-      <span class="odds">1.34</span>
+  <div class="prediction-card">
+    <div class="prediction-left">
+      <div class="ball">⚽</div>
+      <div class="prediction-info">
+        <div class="market">Under 3.5</div>
+        <div class="match">Pelister Bitola vs FK Makedonija</div>
+        <div class="type">Over/Under</div>
+      </div>
     </div>
-    <div class="teams">Athlone Town AFC vs Bray Wanderers AFC</div>
-    <div class="market">Over/Under</div>
+    <div class="odds">1.26</div>
+  </div>
+
+  <div class="prediction-card">
+    <div class="prediction-left">
+      <div class="ball">⚽</div>
+      <div class="prediction-info">
+        <div class="market">Under 3.5</div>
+        <div class="match">Al-Seeb vs Sur SC</div>
+        <div class="type">Over/Under</div>
+      </div>
+    </div>
+    <div class="odds">1.31</div>
+  </div>
+
+  <div class="prediction-card">
+    <div class="prediction-left">
+      <div class="ball">⚽</div>
+      <div class="prediction-info">
+        <div class="market">Under 3.5</div>
+        <div class="match">FK Pribram vs Sparta Prague B</div>
+        <div class="type">Over/Under</div>
+      </div>
+    </div>
+    <div class="odds">1.36</div>
+  </div>
+
+  <div class="prediction-card">
+    <div class="prediction-left">
+      <div class="ball">⚽</div>
+      <div class="prediction-info">
+        <div class="market">Under 3.5</div>
+        <div class="match">ASD Pineto vs SS Arezzo</div>
+        <div class="type">Over/Under</div>
+      </div>
+    </div>
+    <div class="odds">1.22</div>
+  </div>
+
+  <div class="prediction-card">
+    <div class="prediction-left">
+      <div class="ball">⚽</div>
+      <div class="prediction-info">
+        <div class="market">Under 3.5</div>
+        <div class="match">Gainsborough Trinity vs Prescot Cables</div>
+        <div class="type">Over/Under</div>
+      </div>
+    </div>
+    <div class="odds">1.27</div>
+  </div>
+
+  <div class="prediction-card">
+    <div class="prediction-left">
+      <div class="ball">⚽</div>
+      <div class="prediction-info">
+        <div class="market">Under 3.5</div>
+        <div class="match">Napoli vs Lazio</div>
+        <div class="type">Over/Under</div>
+      </div>
+    </div>
+    <div class="odds">1.25</div>
   </div>
 
 </div>
-
-</body>
-</html>
 
     <h2>Choose Your Package</h2>
 
